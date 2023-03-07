@@ -1,0 +1,68 @@
+/// <summary>
+/// ///////////////seyed Radin Mahfouzian////////tamrine 5/////////reshte mohandesi narnafzar//////////
+/// </summary>
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        string input;
+        int number;
+        ConsoleKeyInfo digit;
+        do
+        {
+            Console.WriteLine("*please enter the collegians mark...*");
+            number = 0;
+            do
+            {
+                do
+                {
+                    digit = Console.ReadKey(true);
+                }
+                while (digit.KeyChar.ToString() != "0" && digit.KeyChar.ToString() != "1" &&
+                        digit.KeyChar.ToString() != "2" && digit.KeyChar.ToString() != "3" &&
+                        digit.KeyChar.ToString() != "4" && digit.KeyChar.ToString() != "5" &&
+                        digit.KeyChar.ToString() != "6" && digit.KeyChar.ToString() != "7" &&
+                        digit.KeyChar.ToString() != "8" && digit.KeyChar.ToString() != "9" &&
+                        digit.Key.ToString() != "Enter");
+                if (digit.Key.ToString() != "Enter")
+                {
+                    number = number * 10 + Convert.ToInt32(digit.KeyChar.ToString());
+                    Console.Write(digit.KeyChar);
+                }
+            }
+            while (digit.Key.ToString() != "Enter");
+            Console.WriteLine();
+            switch (number)
+            {
+                case >= 17 and <= 20:
+                    Console.WriteLine("The collegians rank : A :))) ");
+                    Console.WriteLine("The collegians percent is " + number * 5 + "%");
+                    break;
+                case >= 15 and < 17:
+                    Console.WriteLine("The collegians rank : B");
+                    Console.WriteLine("The collegians percent is " + number * 5 + "%");
+                    break;
+                case >= 10 and < 15:
+                    Console.WriteLine("The collegians rank : C");
+                    Console.WriteLine("The collegians percent is " + number * 5 + "%");
+                    break;
+                case >= 0 and < 10:
+                    Console.WriteLine("The collegian is failed :((( ");
+                    Console.WriteLine("The collegians percent is " + number * 5 + "%");
+                    break;
+                default:
+                    Console.WriteLine("Wrong mark");
+                    break;
+            }
+            Console.WriteLine("If you are willing to continue press y, if not enter n:");
+            do
+            {
+                input = Console.ReadKey(true).KeyChar.ToString();
+            }
+            while (input.ToLower() != "y" && input.ToLower() != "n");
+
+        }
+        while (input.ToLower() == "y");
+        Console.WriteLine("  Hope you have a good day :))) ");
+    }
+}
