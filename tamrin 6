@@ -1,0 +1,88 @@
+/// <summary>
+/// ///////////////seyed Radin Mahfouzian////////tamrine 6/////////reshte mohandesi narnafzar//////////
+/// </summary>
+string answer;
+int number;
+string input;
+do
+{
+    Console.WriteLine("Are you married? (enter y or n)");
+    answer = Console.ReadLine();
+    switch (answer)
+    {
+        case "y" or "Y":
+            Console.WriteLine("Are you pleased?");
+            married();
+            break;
+        case "n" or "N":
+            Console.WriteLine("are you planning to get married?");
+            notmarried();
+            break;
+    }
+    void married()
+    {
+        answer = Console.ReadLine();
+        switch (answer)
+        {
+            case "y" or "Y":
+                Console.WriteLine("do you have any kids?");
+                kids();
+                break;
+            case "n" or "N":
+                Console.WriteLine(" apply for a divorce immediately bro :(( ");
+                break;
+        }
+    }
+    void notmarried()
+    {
+        answer = Console.ReadLine();
+        switch (answer)
+        {
+            case "y" or "Y":
+                Console.WriteLine("wish you well bro :))) ");
+                break;
+            case "n" or "N":
+                Console.WriteLine("hope you find someone soon enough bro :)) ");
+                break;
+        }
+    }
+    void kids()
+    {
+        answer = Console.ReadLine();
+        switch (answer)
+        {
+            case "y" or "Y":
+                Console.WriteLine("how wonderful");
+                nkids();
+                break;
+            case "n" or "N":
+                Console.WriteLine("shall the lord give you some");
+                break;
+        }
+    }
+    void nkids()
+    {
+        Console.WriteLine("how many kids do you have? ");
+        number = Convert.ToInt32(Console.ReadLine());
+        switch (number)
+        {
+            case <= 5 and > 0:
+                Console.WriteLine("shall the lord save them");
+                break;
+            case > 5:
+                Console.WriteLine("chill out bro :(( ");
+                break;
+            default:
+                Console.WriteLine("    :||||| ");
+                break;
+        }
+    }
+    Console.WriteLine("would you like to go again?");
+    do
+    {
+        input = Console.ReadKey(true).KeyChar.ToString();
+    }
+    while (input.ToLower() != "y" && input.ToLower() != "n");
+}
+ while (input.ToLower() == "y") ;
+Console.WriteLine("  Hope you have a good day :))) ");
